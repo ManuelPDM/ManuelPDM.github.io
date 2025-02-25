@@ -162,10 +162,6 @@ main {
   color: #555;
 }
 
-/* Dark Mode Hero Override */
-body.dark-mode .hero {
-  background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
-}
 
 /* Projects Section */
 .projects {
