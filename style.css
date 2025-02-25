@@ -142,7 +142,7 @@ main {
 }
 
 /* Hero Section */
-/* Use fixed colors so the text doesn't change in dark mode */
+/* Use fixed colors with !important to ensure they remain unchanged */
 .hero {
   text-align: center;
   padding: 100px 20px;
@@ -155,12 +155,12 @@ main {
 .hero h1 {
   font-size: 3em;
   margin-bottom: 20px;
-  color: #222;  /* Fixed color */
+  color: #222 !important;  /* Fixed color */
 }
 
 .hero p {
   font-size: 1.2em;
-  color: #555;  /* Fixed color */
+  color: #555 !important;  /* Fixed color */
 }
 
 /* Projects Section */
@@ -263,6 +263,22 @@ footer {
   color: #777;
 }
 
+/* Social Links in Footer */
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  font-size: 3em;  /* 3 times larger than default */
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+}
+
 /* About Me Section */
 .about-me {
   display: flex;
@@ -305,18 +321,4 @@ footer {
   font-size: 1em;
   margin-right: 8px;
   color: var(--text-color);
-}
-.social-links {
-  margin-top: 10px;
-}
-
-.social-links a {
-  margin: 0 10px;
-  font-size: 1.5em;
-  color: var(--text-color);
-  transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-  color: var(--primary-color);
 }
