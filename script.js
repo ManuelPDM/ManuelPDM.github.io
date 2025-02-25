@@ -1,21 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Check localStorage for dark mode preference
-  if (localStorage.getItem('dark-mode') === 'true') {
-    document.body.classList.add('dark-mode');
+  const darkModeEnabled = localStorage.getItem("dark-mode") === "true";
+  if (darkModeEnabled) {
+    document.body.classList.add("dark-mode");
+    const toggle = document.getElementById("dark-toggle");
+    if (toggle) toggle.checked = true;
   }
 
-  // Only add toggle functionality if the toggle button exists
-  const darkToggle = document.getElementById('dark-toggle');
+  const darkToggle = document.getElementById("dark-toggle");
   if (darkToggle) {
-    darkToggle.addEventListener('click', function() {
-      // Toggle dark mode on the body
-      document.body.classList.toggle('dark-mode');
-
-      // Save the updated preference in localStorage
-      if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('dark-mode', 'true');
+    darkToggle.addEventListener("change", function() {
+      if (this.checked) {
+        document.body.classList.add("dark-mode");
+        localStorage.setItem("dark-mode", "true");
       } else {
-        localStorage.setItem('dark-mode', 'false');
+        document.body.classList.remove("dark-mode");
+        localStorage.setItem("dark-mode", "false");
       }
     });
   }
