@@ -11,6 +11,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap" rel="stylesheet">
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .example-images {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .example-images img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .example-image-container {
+      flex: 1;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -44,25 +63,32 @@
        </p>
        <ul>
          <li>
-           <strong>Grayscale Conversion & Thresholding:</strong> Each input image is first converted to grayscale. Then, by applying thresholding, I create a binary version of the image that emphasizes key contours. This simplifies the puzzle into data that’s easier to analyze.
+           <strong>Grayscale Conversion & Thresholding:</strong> Each input image is first converted to grayscale and thresholded to create a binary version, emphasizing key contours.
          </li>
          <li>
-           <strong>Contour Detection & Feature Extraction:</strong> Using OpenCV's contour detection, the algorithm isolates significant shapes in the puzzle. It extracts several geometric features—such as the number of edges, centroid coordinates, contour area, and even orientation using ellipse fitting or minimum area rectangles. These features form the backbone of the pattern recognition process.
+           <strong>Contour Detection & Feature Extraction:</strong> The algorithm detects contours and extracts geometric features like edge count, centroid, area, and orientation using techniques such as ellipse fitting.
          </li>
          <li>
-           <strong>Pattern Comparison Techniques:</strong> The project employs a multi-step comparison process. By overlaying images and computing pixel differences, it captures subtle changes between different parts of the matrix. Techniques like image subtraction, minimum overlays, and even bitwise XOR operations help deduce relationships among the images.
+           <strong>Pattern Comparison Techniques:</strong> Using overlay methods, pixel difference calculations, and bitwise operations, the system compares segments of the puzzle to deduce transformation rules.
          </li>
          <li>
-           <strong>Decision-Making Logic:</strong> Once the features are extracted and the patterns compared, similarity scores are computed to identify the best match among candidate answers. This blend of geometric analysis and pixel-level comparisons ensures that the solution is both accurate and robust.
+           <strong>Decision-Making Logic:</strong> By aggregating similarity scores from multiple comparisons, the algorithm selects the best answer, showcasing both precision and innovation.
          </li>
        </ul>
        <p>
-         While the inner workings involve some advanced math and image manipulation, the overall design abstracts these complexities into a streamlined system that’s both innovative and hard to replicate. It’s a testament to combining technical rigor with creative problem-solving.
+         While the inner workings involve complex math and image manipulation, the design abstracts these details into a streamlined, robust system that’s hard to replicate—making it not just functional, but a true showcase of technical creativity.
        </p>
-       <div class="example-image">
-         <h3>Example Problem</h3>
-         <img src="ravensimage.png" alt="Raven's Progressive Matrix Example" />
-         <p>A snapshot of one of the challenging puzzles tackled by the project.</p>
+       <div class="example-images">
+         <div class="example-image-container">
+           <h3>Simple Problem</h3>
+           <img src="ravensimage.png" alt="Raven's Progressive Matrix Example - Simple" />
+           <p>A snapshot of a straightforward puzzle.</p>
+         </div>
+         <div class="example-image-container">
+           <h3>Challenging Puzzle</h3>
+           <img src="hard_ravens.png" alt="Raven's Progressive Matrix Example - Hard" />
+           <p>An example of a more complex, challenging puzzle.</p>
+         </div>
        </div>
        <a href="projects.html" class="back-link">Back to Projects</a>
     </section>
