@@ -1,20 +1,22 @@
 :root {
   --primary-color: #0070f3;
+  --background: #ffffff;
+  --text-color: #222;
   --light-gray: #f4f4f4;
   --medium-gray: #ccc;
   --dark-gray: #444;
-  --background: #fff;
-  --text-color: #333;
+  --box-background: #fff;
 }
 
-/* Dark mode overrides */
+/* Dark Mode Overrides */
 body.dark-mode {
   --background: #121212;
-  --text-color: #f0f0f0;
+  --text-color: #e0e0e0;
   --primary-color: #0a84ff;
-  --light-gray: #1e1e1e;
-  --medium-gray: #2c2c2c;
-  --dark-gray: #444;
+  --light-gray: #1f1f1f;
+  --medium-gray: #333;
+  --dark-gray: #ccc;
+  --box-background: #1e1e1e;
 }
 
 /* Reset */
@@ -44,7 +46,6 @@ body {
   z-index: 100;
 }
 
-/* Dark mode header adjustment */
 body.dark-mode .site-header {
   background-color: rgba(18, 18, 18, 0.8);
   border-bottom: 1px solid rgba(40, 40, 40, 0.8);
@@ -69,13 +70,18 @@ body.dark-mode .site-header {
   color: var(--primary-color);
 }
 
-/* Toggle Switch (iPhone-like) */
+/* Dark Mode Toggle (iPhone-style) */
+.dark-mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
 .switch {
   position: relative;
   display: inline-block;
   width: 50px;
-  height: 28px;
-  margin-left: 20px;
+  height: 25px;
 }
 
 .switch input {
@@ -87,21 +93,23 @@ body.dark-mode .site-header {
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0; left: 0;
-  right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: #ccc;
   transition: 0.4s;
-  border-radius: 28px;
+  border-radius: 25px;
 }
 
 .slider:before {
   position: absolute;
   content: "";
-  height: 22px;
-  width: 22px;
+  height: 20px;
+  width: 20px;
   left: 3px;
-  bottom: 3px;
-  background-color: #fff;
+  bottom: 2px;
+  background-color: silver;
   transition: 0.4s;
   border-radius: 50%;
 }
@@ -111,13 +119,13 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(22px);
+  transform: translateX(25px);
+  background-color: white;
 }
 
 /* Main Content */
 main {
-  /* Enhanced white space & padding */
-  padding-top: 120px;
+  padding-top: 120px; /* Increased for better spacing below header */
   max-width: 1200px;
   margin: 0 auto;
   padding: 120px 30px 60px;
@@ -144,12 +152,7 @@ main {
   color: #555;
 }
 
-/* Dark mode hero override */
-body.dark-mode .hero {
-  background: linear-gradient(135deg, #2c2c2c 0%, #1e1e1e 100%);
-}
-
-/* Projects Section - Sleek Gray Theme */
+/* Projects Section */
 .projects {
   background-color: var(--light-gray);
   padding: 50px;
@@ -174,11 +177,11 @@ body.dark-mode .hero {
 }
 
 .project-item {
-  background: #f7f7f7;
-  border: 1px solid #ddd;
+  background: var(--box-background);
+  border: 1px solid var(--medium-gray);
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   width: 300px;
   overflow: hidden;
 }
@@ -193,13 +196,6 @@ body.dark-mode .hero {
 .project-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-/* Dark mode project overrides */
-body.dark-mode .project-item {
-  background: var(--medium-gray);
-  border: 1px solid var(--dark-gray);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Project Details */
@@ -252,10 +248,11 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 50px 20px;
-  background-color: var(--light-gray);
+  background-color: var(--box-background);
   border-radius: 8px;
   margin: 50px auto;
   max-width: 1200px;
+  transition: background-color 0.3s ease;
 }
 
 .about-me .portrait {
@@ -280,4 +277,11 @@ footer {
   font-size: 1.1em;
   color: var(--text-color);
   line-height: 1.6;
+}
+
+/* Minimalist Iconography & Typography */
+.fa {
+  font-size: 1em;
+  margin-right: 8px;
+  color: var(--text-color);
 }
