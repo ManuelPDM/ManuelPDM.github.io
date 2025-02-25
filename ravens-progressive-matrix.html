@@ -34,6 +34,35 @@
        <p>
          This project is an exploration of cognitive patterns and problem-solving algorithms inspired by Raven's Progressive Matrices. It delves into pattern recognition and innovative AI-driven reasoning techniques.
        </p>
+       <h2>Project Overview</h2>
+       <p>
+         The project uses advanced image processing techniques to analyze and solve visual puzzles. At its core, the system:
+       </p>
+       <ul>
+         <li>
+           <strong>Image Processing:</strong> Uses OpenCV and Pillow to convert images into grayscale, apply thresholding, and extract key contours.
+         </li>
+         <li>
+           <strong>Feature Extraction:</strong> Extracts geometric information from each image, such as the number of edges, shape orientation, area, and fill state.
+         </li>
+         <li>
+           <strong>Pattern Recognition:</strong> Compares patterns between different sections of the matrix. By evaluating changes in shape, movement, scaling, and rotation, the algorithm infers the underlying rules.
+         </li>
+         <li>
+           <strong>Overlay Techniques:</strong> Employs image overlay and pixel-difference methods to capture subtle variations and validate the deduced patterns.
+         </li>
+         <li>
+           <strong>Decision Making:</strong> Aggregates various similarity scores to select the best answer, showcasing a multi-faceted approach to problem solving.
+         </li>
+       </ul>
+       <p>
+         The design intentionally abstracts complex operations and data flows, ensuring that while the approach is innovative, the implementation details remain non-trivial to replicate. This highlights both technical proficiency and creative problem-solving skills.
+       </p>
+       <div class="example-image">
+         <h3>Example Problem</h3>
+         <img src="ravensimage" alt="Raven's Progressive Matrix Example" />
+         <p>A sample puzzle showcasing the visual challenge addressed by the project.</p>
+       </div>
        <a href="projects.html" class="back-link">Back to Projects</a>
     </section>
   </main>
