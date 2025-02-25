@@ -63,6 +63,17 @@ nav ul li a.active, nav ul li a:hover {
   border-radius: 4px;
 }
 
+/* Updated project item link styles to remove blue highlighting */
+.project-item a {
+  color: inherit; /* This will use the parent's color (e.g., #333) */
+  text-decoration: none;
+}
+
+/* Optional: Add a subtle hover effect */
+.project-item a:hover {
+  text-decoration: underline;
+}
+
 /* Keyframes for fadeInUp animation */
 @keyframes fadeInUp {
   to {
