@@ -71,12 +71,20 @@ main {
   color: #555;
 }
 
-/* Projects Section */
+/* Projects Section - Sleek Gray Theme */
+.projects {
+  background-color: #f4f4f4; /* Subtle, sleek gray background */
+  padding: 50px;
+  border-radius: 10px;
+  margin: 50px auto;
+  max-width: 1200px;
+}
+
 .projects h1 {
   text-align: center;
   margin-bottom: 50px;
   font-size: 2.5em;
-  color: #222;
+  color: #444; /* Darker gray for a refined look */
 }
 
 .project-list {
@@ -87,10 +95,10 @@ main {
 }
 
 .project-item {
-  background: #fff;
-  border: 1px solid #eaeaea;
+  background: #f7f7f7; /* Light gray background for project items */
+  border: 1px solid #ddd; /* Light gray border */
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 300px;
   overflow: hidden;
@@ -99,13 +107,13 @@ main {
 .project-item a {
   display: block;
   padding: 20px;
-  color: inherit;
+  color: #333;
   text-decoration: none;
 }
 
 .project-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 /* Project Details */
@@ -114,7 +122,7 @@ main {
   background: #fff;
   border: 1px solid #eaeaea;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 20px;
 }
 
@@ -151,6 +159,7 @@ footer {
   margin-top: 50px;
   color: #777;
 }
+
 /* About Me Section */
 .about-me {
   display: flex;
@@ -166,8 +175,8 @@ footer {
 .about-me .portrait {
   width: 200px;
   height: auto;
-  border-radius: 15px; /* curves the edges */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* adds shadow */
+  border-radius: 15px; /* Curves the edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
   margin-right: 30px;
 }
 
