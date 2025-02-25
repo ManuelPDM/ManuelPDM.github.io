@@ -32,35 +32,32 @@
     <section class="project-details">
        <h1>Raven's Progressive Matrix Project</h1>
        <p>
-         Welcome to a deep dive into one of the coolest projects I’ve ever built. Inspired by the timeless challenge of Raven's Progressive Matrices, this project blends creative problem solving with state-of-the-art image processing.
+         Welcome to one of the coolest projects I’ve built—a deep dive into solving Raven's Progressive Matrices using state-of-the-art image processing and pattern recognition techniques.
        </p>
        <h2>My Journey</h2>
        <p>
-         I embarked on this project to explore how AI can mimic human pattern recognition. Instead of simply solving puzzles, I wanted to understand the underlying cognitive patterns that make these puzzles so intriguing.
+         I embarked on this project with the goal of mimicking human cognitive pattern recognition. Using Python and robust libraries like OpenCV, Pillow, and NumPy, I developed an algorithm that not only solves these puzzles but also sheds light on how visual patterns can be deciphered.
        </p>
+       <h2>Under the Hood</h2>
        <p>
-         Using Python and powerful libraries like OpenCV, Pillow, and NumPy, I developed a system that transforms visual puzzles into grayscale images, detects key contours, and extracts unique features such as shape orientation, area, and fill state. This multi-step approach lets the algorithm compare and contrast different segments of a puzzle, teasing out subtle patterns that hint at the correct solution.
-       </p>
-       <h2>The Cool Stuff</h2>
-       <p>
-         Here’s what makes this project stand out:
+         Here’s a closer look at the technical side of the project:
        </p>
        <ul>
          <li>
-           <strong>Advanced Image Processing:</strong> Leveraging OpenCV and Pillow, I transform complex images into simple, analyzable data.
+           <strong>Grayscale Conversion & Thresholding:</strong> Each input image is first converted to grayscale. Then, by applying thresholding, I create a binary version of the image that emphasizes key contours. This simplifies the puzzle into data that’s easier to analyze.
          </li>
          <li>
-           <strong>Feature Extraction:</strong> By detecting edges, contours, and geometric features, the system uncovers hidden relationships between puzzle pieces.
+           <strong>Contour Detection & Feature Extraction:</strong> Using OpenCV's contour detection, the algorithm isolates significant shapes in the puzzle. It extracts several geometric features—such as the number of edges, centroid coordinates, contour area, and even orientation using ellipse fitting or minimum area rectangles. These features form the backbone of the pattern recognition process.
          </li>
          <li>
-           <strong>Innovative Pattern Recognition:</strong> My approach compares multiple layers of image data to deduce the transformation rules—without giving away all the secrets!
+           <strong>Pattern Comparison Techniques:</strong> The project employs a multi-step comparison process. By overlaying images and computing pixel differences, it captures subtle changes between different parts of the matrix. Techniques like image subtraction, minimum overlays, and even bitwise XOR operations help deduce relationships among the images.
          </li>
          <li>
-           <strong>Smart Decision Making:</strong> The final step combines various similarity scores to select the best answer, showcasing a unique blend of creativity and technical rigor.
+           <strong>Decision-Making Logic:</strong> Once the features are extracted and the patterns compared, similarity scores are computed to identify the best match among candidate answers. This blend of geometric analysis and pixel-level comparisons ensures that the solution is both accurate and robust.
          </li>
        </ul>
        <p>
-         Working on this project was not just about solving puzzles—it was a creative exploration of how algorithms can mimic human thought. I’m proud of how it turned out and excited to share it with you.
+         While the inner workings involve some advanced math and image manipulation, the overall design abstracts these complexities into a streamlined system that’s both innovative and hard to replicate. It’s a testament to combining technical rigor with creative problem-solving.
        </p>
        <div class="example-image">
          <h3>Example Problem</h3>
