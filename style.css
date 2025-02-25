@@ -1,3 +1,22 @@
+:root {
+  --primary-color: #0070f3;
+  --light-gray: #f4f4f4;
+  --medium-gray: #ccc;
+  --dark-gray: #444;
+  --background: #fff;
+  --text-color: #333;
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+  --background: #121212;
+  --text-color: #e0e0e0;
+  --primary-color: #0a84ff;
+  --light-gray: #1f1f1f;
+  --medium-gray: #333;
+  --dark-gray: #ccc;
+}
+
 /* Reset */
 * {
   margin: 0;
@@ -8,20 +27,27 @@
 /* Base Styling */
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: #fff;
-  color: #333;
+  background-color: var(--background);
+  color: var(--text-color);
   line-height: 1.6;
 }
 
 /* Header */
 .site-header {
-  background-color: #fff;
-  border-bottom: 1px solid #eaeaea;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(234, 234, 234, 0.8);
   padding: 20px 0;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 100;
+}
+
+/* Dark mode header adjustment */
+body.dark-mode .site-header {
+  background-color: rgba(18, 18, 18, 0.8);
+  border-bottom: 1px solid rgba(40, 40, 40, 0.8);
 }
 
 .site-header nav ul {
@@ -33,22 +59,23 @@ body {
 
 .site-header nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: var(--text-color);
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .site-header nav ul li a:hover,
 .site-header nav ul li a.active {
-  color: #0070f3;
+  color: var(--primary-color);
 }
 
 /* Main Content */
 main {
-  padding-top: 100px; /* Offset for fixed header */
+  /* Enhanced white space & padding */
+  padding-top: 120px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 100px 20px 50px;
+  padding: 120px 30px 60px;
 }
 
 /* Hero Section */
@@ -56,6 +83,7 @@ main {
   text-align: center;
   padding: 100px 20px;
   background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
+  background-attachment: fixed; /* Parallax effect */
   border-radius: 8px;
   margin-bottom: 50px;
 }
@@ -63,7 +91,7 @@ main {
 .hero h1 {
   font-size: 3em;
   margin-bottom: 20px;
-  color: #222;
+  color: var(--dark-gray);
 }
 
 .hero p {
@@ -73,7 +101,7 @@ main {
 
 /* Projects Section - Sleek Gray Theme */
 .projects {
-  background-color: #f4f4f4; /* Subtle, sleek gray background */
+  background-color: var(--light-gray);
   padding: 50px;
   border-radius: 10px;
   margin: 50px auto;
@@ -84,19 +112,20 @@ main {
   text-align: center;
   margin-bottom: 50px;
   font-size: 2.5em;
-  color: #444; /* Darker gray for a refined look */
+  color: var(--dark-gray);
 }
 
+/* Responsive, Grid-Based Layout for Projects */
 .project-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+  justify-items: center;
 }
 
 .project-item {
-  background: #f7f7f7; /* Light gray background for project items */
-  border: 1px solid #ddd; /* Light gray border */
+  background: #f7f7f7;
+  border: 1px solid #ddd;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -107,7 +136,7 @@ main {
 .project-item a {
   display: block;
   padding: 20px;
-  color: #333;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -119,7 +148,7 @@ main {
 /* Project Details */
 .project-details {
   padding: 40px;
-  background: #fff;
+  background: var(--background);
   border: 1px solid #eaeaea;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -129,7 +158,7 @@ main {
 .project-details h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #222;
+  color: var(--dark-gray);
 }
 
 .project-details p {
@@ -141,7 +170,7 @@ main {
 .back-link {
   display: inline-block;
   margin-top: 20px;
-  color: #0070f3;
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -175,8 +204,8 @@ footer {
 .about-me .portrait {
   width: 200px;
   height: auto;
-  border-radius: 15px; /* Curves the edges */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-right: 30px;
 }
 
@@ -187,11 +216,18 @@ footer {
 .about-me .about-text h2 {
   font-size: 2em;
   margin-bottom: 15px;
-  color: #222;
+  color: var(--dark-gray);
 }
 
 .about-me .about-text p {
   font-size: 1.1em;
   color: #555;
   line-height: 1.6;
+}
+
+/* Minimalist Iconography & Typography */
+.fa {
+  font-size: 1em;
+  margin-right: 8px;
+  color: var(--text-color);
 }
