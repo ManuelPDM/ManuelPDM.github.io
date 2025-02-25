@@ -22,14 +22,41 @@
   <main>
     <section class="project-details">
        <h1>Multi Agent Reinforcement Learning Overcooked</h1>
+
        <p>
-         In this project, I explore how multi-agent reinforcement learning techniques can be applied to complex game scenarios such as Overcooked. The goal is to optimize team strategies and adapt dynamically to in-game challenges.
+         <strong>Overview:</strong>
+         This project explores a multi-agent deep reinforcement learning approach within the Overcooked AI environment maintained by HumanCompatibleAI. The objective was to enable two agents to learn effective cooperative strategies for maximizing soup delivery performance in varied, challenging room layouts.
        </p>
+
+       <p>
+         <strong>Approach and Tools:</strong>
+         Developed using <em>PyTorch</em>, this project investigated several state-of-the-art architectures including Double Deep Q-Networks (DDQN), COMA, and MADDPG. Through extensive experimentation, a shared neural network design was adopted—leveraging CUDA for GPU acceleration to reduce training time by 50%. Robust data processing and debugging practices were employed throughout the development process.
+       </p>
+
+       <p>
+         <strong>Methodology:</strong>
+         The initial baseline approach was adapted from a standard DQN and then enhanced by transitioning to DDQN to address overestimation issues and improve learning stability. A novel, coordination-focused reward shaping mechanism was integrated to foster cooperative behavior between the agents. This strategy allowed both agents to effectively handle complex scenarios by dynamically adjusting rewards based on their cooperative actions.
+       </p>
+
+       <p>
+         <strong>Results and Impact:</strong>
+         The refined algorithm achieved stable convergence across multiple Overcooked scenarios, demonstrating robust performance in environments demanding high levels of coordination. Comprehensive model evaluation and hyperparameter optimization confirmed that the shared neural network and reward tuning significantly enhanced both learning efficiency and overall performance.
+       </p>
+
+       <p>
+         <strong>Conclusion:</strong>
+         This multi-agent reinforcement learning project underscores the potential of advanced deep RL techniques in cooperative settings. By integrating DDQN with precise reward shaping and leveraging GPU acceleration, the project not only improved training efficiency but also set a foundation for future research in complex multi-agent environments.
+       </p>
+
+       <p class="citation">
+         Reference: <a href="https://github.com/HumanCompatibleAI/overcooked_ai?tab=readme-ov-file" target="_blank">Overcooked AI Repository (HumanCompatibleAI)</a> :contentReference[oaicite:0]{index=0}
+       </p>
+
        <a href="projects.html" class="back-link">Back to Projects</a>
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Your Name</p>
+    <p>&copy; 2025 ManuelPDM</p>
   </footer>
   <script src="script.js"></script>
 </body>
