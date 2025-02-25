@@ -151,3 +151,38 @@ footer {
   margin-top: 50px;
   color: #777;
 }
+/* About Me Section */
+.about-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin: 50px auto;
+  max-width: 1200px;
+}
+
+.about-me .portrait {
+  width: 200px;
+  height: auto;
+  border-radius: 15px; /* curves the edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* adds shadow */
+  margin-right: 30px;
+}
+
+.about-me .about-text {
+  flex: 1;
+}
+
+.about-me .about-text h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.about-me .about-text p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+}
