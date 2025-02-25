@@ -322,3 +322,11 @@ footer {
   margin-right: 8px;
   color: var(--text-color);
 }
+.project-image {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
