@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-  // This is a placeholder for any future dynamic interactions.
-  // The CSS animations kick in automatically on load.
+document.addEventListener("DOMContentLoaded", () => {
+  // Future dynamic interactions or animations can be added here.
 });
