@@ -338,6 +338,17 @@ footer {
   margin: 40px auto;
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  /* New container for main content on the index page */
+.index-main {
+  background-color: var(--light-gray);
+  padding: 50px 30px;
+  border-radius: 10px;
+  margin: 50px auto;
+  max-width: 1200px;
+}
+
+/* (Keep your existing styles below unchanged) */
+
 }
 /* Base styles remain the same */
 
