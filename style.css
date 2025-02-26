@@ -18,6 +18,10 @@ body.dark-mode {
   --dark-gray: #ccc;
   --box-background: #1e1e1e;
 }
+body.dark-mode .projects {
+  background-color: #1e1e1e; /* A very dark grey */
+}
+
 
 /* Reset */
 * {
