@@ -392,5 +392,19 @@ footer {
   .about-text {
     overflow: visible;
   }
+  .projects {
+    margin: 20px 10px; /* add horizontal margins so content doesn't touch the edges */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .project-list {
+    grid-template-columns: 1fr; /* one column layout on smaller screens */
+  }
+  h1, h2 {
+    font-size: 1.5rem; /* Adjust size as needed */
+    white-space: normal; /* Allow wrapping */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
 
 }
