@@ -427,4 +427,8 @@ footer {
     display: flex;
     align-items: center;
   }
+  .dark-mode-toggle .toggle-label {
+  font-size: 0.8rem;
+}
+
 }
