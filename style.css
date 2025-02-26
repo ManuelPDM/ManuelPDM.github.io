@@ -342,6 +342,7 @@ footer {
 /* Base styles remain the same */
 
 
+
 /* Responsive adjustments for screens smaller than 768px */
 @media (max-width: 768px) {
   /* General adjustments */
@@ -416,15 +417,17 @@ footer {
   /* Dark Mode Toggle Adjustments for Mobile */
   .dark-mode-toggle {
     position: static;
-    display: block;
+    display: flex;
+    flex-direction: column-reverse; /* Label above the switch */
+    align-items: flex-end; /* Align to right */
     margin: 10px 0;
-    text-align: left;
+    width: 100%;
   }
   .dark-mode-toggle .switch {
-    display: inline-block;
+    /* Keep the switch inline, with a slight bottom margin */
+    margin-bottom: 5px;
   }
   .dark-mode-toggle .toggle-label {
-    display: block;
-    margin-top: 5px;
+    text-align: right;
   }
 }
