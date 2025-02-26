@@ -378,4 +378,18 @@ footer {
   p, li {
     font-size: 0.9rem;
   }
+  .about-me {
+    /* Ensure the container allows wrapping */
+    overflow: auto;
+  }
+  .portrait {
+    float: left;
+    width: 40%; /* Adjust as needed */
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+  .about-text {
+    /* Clear float if needed at the end */
+    overflow: auto;
+  }
 }
