@@ -378,18 +378,19 @@ footer {
   p, li {
     font-size: 0.9rem;
   }
+    /* Make sure the container is block */
   .about-me {
-    /* Ensure the container allows wrapping */
-    overflow: auto;
+    display: block;
   }
+  /* Float the image to the left and reduce its width so text can wrap */
   .portrait {
     float: left;
-    width: 40%; /* Adjust as needed */
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+    width: 30%;  /* Try adjusting this percentage */
+    margin: 0 1rem 1rem 0;
   }
+  /* Ensure that any clear is removed in the text */
   .about-text {
-    /* Clear float if needed at the end */
-    overflow: auto;
+    overflow: visible;
   }
+
 }
