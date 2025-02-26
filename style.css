@@ -339,3 +339,43 @@ footer {
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.25);
 }
+/* Base styles remain the same */
+
+/* Responsive adjustments for screens smaller than 768px */
+@media (max-width: 768px) {
+  /* Reduce general padding and margin */
+  body {
+    padding: 0.5rem;
+  }
+  .site-header {
+    padding: 0.5rem 1rem;
+    flex-direction: column;
+  }
+  .site-header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .site-header nav ul li {
+    margin: 0.5rem 0;
+  }
+  main {
+    padding: 1rem;
+  }
+  /* Ensure images are responsive */
+  img {
+    width: 100%;
+    height: auto;
+  }
+  /* Stack elements that might have been side-by-side */
+  .example-images {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  /* Adjust font sizes for readability */
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+  p, li {
+    font-size: 0.9rem;
+  }
+}
