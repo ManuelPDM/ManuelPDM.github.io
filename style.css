@@ -343,22 +343,28 @@ footer {
 
 
 
-/* Responsive adjustments for screens smaller than 768px */
 @media (max-width: 768px) {
   /* General adjustments */
   body {
     padding: 0.5rem;
   }
   .site-header {
-    padding: 0.5rem 1rem;
-    flex-direction: column;
+    /* Keep header in a row with space between nav and toggle */
+    flex-direction: row;
+    justify-content: center;
+  }
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
   .site-header nav ul {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    gap: 20px;
   }
   .site-header nav ul li {
-    margin: 0.5rem 0;
+    margin: 0;
   }
   main {
     padding: 1rem;
@@ -378,7 +384,7 @@ footer {
     font-size: 0.9rem;
   }
 
-  /* Adjustments for Projects List Page */
+  /* Projects List Page Adjustments */
   .projects {
     margin: 20px 10px;
     padding: 20px;
@@ -392,7 +398,7 @@ footer {
     max-width: 100%;
   }
 
-  /* Adjustments for Project Details Pages (titles) */
+  /* Project Details Adjustments */
   .project-details h1,
   .project-details h2 {
     font-size: 1.5rem;
@@ -401,7 +407,7 @@ footer {
     overflow-wrap: break-word;
   }
 
-  /* About Me Section tweaks if needed */
+  /* About Me Section tweaks */
   .about-me {
     display: block;
   }
@@ -416,18 +422,9 @@ footer {
 
   /* Dark Mode Toggle Adjustments for Mobile */
   .dark-mode-toggle {
+    /* Keep it in the header container aligned to the right */
     position: static;
     display: flex;
-    flex-direction: column-reverse; /* Label above the switch */
-    align-items: flex-end; /* Align to right */
-    margin: 10px 0;
-    width: 100%;
-  }
-  .dark-mode-toggle .switch {
-    /* Keep the switch inline, with a slight bottom margin */
-    margin-bottom: 5px;
-  }
-  .dark-mode-toggle .toggle-label {
-    text-align: right;
+    align-items: center;
   }
 }
