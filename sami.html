@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAMI: Social AI Agent - ManuelPDM</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Minimalist font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Use the same classes as your antenna project for a consistent look */
+    .project-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      margin: 1rem auto;
+    }
+    .project-poster {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      margin: 2rem auto;
+    }
+    .download-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #007BFF;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    .download-link:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav>
+      <ul>
+         <li><a href="index.html">Home</a></li>
+         <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+      <label class="switch">
+        <input type="checkbox" id="dark-toggle">
+        <span class="slider round"></span>
+      </label>
+      <span class="toggle-label">Dark Mode</span>
+    </div>
+  </header>
+  <main>
+    <section class="project-details">
+      <h1>SAMI: Social AI Agent</h1>
+      <!-- Main project image styled similarly to the antenna project -->
+      <img src="sami.jpg" alt="SAMI Project Overview" class="project-image">
+      <p>
+        SAMI is an AI social agent developed at AI-Aloe DI Lab. Designed for online learning environments, SAMI not only connects students based on shared interests but also provides real-time, context-aware explanations of its decisions.
+      </p>
+      <h2>Project Overview & Technical Insights</h2>
+      <p>
+        SAMI—short for Social Agent Mediated Interactions—utilizes a graph-based knowledge database (Neo4j) to store and retrieve student data extracted from discussion forums. An LLM (GPT-4o-mini) drives its dynamic self-explanation capabilities. When a learner submits a query using a tag like <code>#samiexplain</code>, the system distinguishes between static and episodic questions. For episodic queries, SAMI anonymizes sensitive information using SpaCy and generates detailed, context-aware responses in real time via a Flask-powered server.
+      </p>
+      <p>
+        This blend of real-time matchmaking and explainable AI (XAI) not only enhances transparency in AI decisions but also fosters greater trust in digital learning environments.
+      </p>
+      <!-- Large poster image styled like the antenna project poster -->
+      <img src="AAAI_pres.png" alt="SAMI AAAI Presentation Poster" class="project-poster">
+      <p>
+        The above poster was used in my AAAI conference presentation, where I showcased the research behind SAMI, including its episodic self-explanation capabilities.
+      </p>
+      <a href="Extended_Abstract.pdf" class="download-link" download>Download Extended Abstract</a>
+      <p><a href="projects.html" class="back-link">← Back to Projects</a></p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 ManuelPDM</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/manuelpdm/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/ManuelPDM" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
