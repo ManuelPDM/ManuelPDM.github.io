@@ -341,9 +341,8 @@ footer {
 }
 /* Base styles remain the same */
 
-/* Responsive adjustments for screens smaller than 768px */
 @media (max-width: 768px) {
-  /* Reduce general padding and margin */
+  /* General adjustments */
   body {
     padding: 0.5rem;
   }
@@ -361,50 +360,54 @@ footer {
   main {
     padding: 1rem;
   }
-  /* Ensure images are responsive */
   img {
     width: 100%;
     height: auto;
   }
-  /* Stack elements that might have been side-by-side */
   .example-images {
     flex-direction: column;
     gap: 1rem;
   }
-  /* Adjust font sizes for readability */
   h1, h2 {
     font-size: 1.5rem;
   }
   p, li {
     font-size: 0.9rem;
   }
-    /* Make sure the container is block */
-  .about-me {
-    display: block;
-  }
-  /* Float the image to the left and reduce its width so text can wrap */
-  .portrait {
-    float: left;
-    width: 30%;  /* Try adjusting this percentage */
-    margin: 0 1rem 1rem 0;
-  }
-  /* Ensure that any clear is removed in the text */
-  .about-text {
-    overflow: visible;
-  }
+
+  /* Adjustments for Projects List Page */
   .projects {
-    margin: 20px 10px; /* add horizontal margins so content doesn't touch the edges */
+    margin: 20px 10px;
     padding: 20px;
     box-sizing: border-box;
   }
   .project-list {
-    grid-template-columns: 1fr; /* one column layout on smaller screens */
+    grid-template-columns: 1fr;
   }
-  h1, h2 {
-    font-size: 1.5rem; /* Adjust size as needed */
-    white-space: normal; /* Allow wrapping */
+  .project-item {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Adjustments for Project Details Pages (titles) */
+  .project-details h1,
+  .project-details h2 {
+    font-size: 1.5rem;
+    white-space: normal;
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
 
+  /* About Me Section tweaks if needed */
+  .about-me {
+    display: block;
+  }
+  .portrait {
+    float: left;
+    width: 30%;
+    margin: 0 1rem 1rem 0;
+  }
+  .about-text {
+    overflow: visible;
+  }
 }
