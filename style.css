@@ -202,7 +202,7 @@ body.dark-mode .projects h1 {
 }
 
 .project-item {
-  background: #f4f4f4;
+  background: var(--light-gray);
   border: 1px solid var(--medium-gray);
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
