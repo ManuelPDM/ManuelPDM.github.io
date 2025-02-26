@@ -163,6 +163,11 @@ main {
   color: #555 !important;  /* Fixed color */
 }
 
+body.index-page {
+  background-color: var(--light-gray);
+}
+
+
 /* Projects Section */
 .projects {
   background-color: var(--light-gray);
